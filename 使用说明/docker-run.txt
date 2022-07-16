@@ -1,0 +1,22 @@
+docker run --name mongo-express -d -p 8081:8081 mongo-express
+
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:latest
+
+
+sudo docker run --name rancher -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher:latest
+docker run --name mongo -d mongo
+
+docker run --name paddle -it -d -v /www/paddle:/paddle hub.baidubce.com/paddlepaddle/paddle:latest /bin/bash
+
+docker run --name tensorflow-jupyter -it -d  -v /www/tf/notebooks:/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-jupyter
+
+docker run -it --name tensorflow -d --rm tensorflow/tensorflow
+{
+  "registry-mirrors": [
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://docker.mirrors.ustc.edu.cn",
+    "http://hub-mirror.c.163.com",
+    "https://hub.docker.com"
+  ]
+}

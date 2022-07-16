@@ -1,0 +1,12 @@
+1、连接容器：
+docker exec -it mysql /bin/bash
+
+2、连接mysql
+mysql -p123456
+
+3、更新权限
+alter user 'root'@'%' identified by '123456' password expire never;
+alter user 'root'@'%' identified with mysql_native_password by '123456';
+flush privileges;
+
+4、可以用Navicat来连接

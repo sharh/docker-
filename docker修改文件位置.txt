@@ -1,0 +1,21 @@
+1、查询docker镜像 
+
+wsl -l -v --all
+
+2、导出镜像名字到d盘的docker目录下
+
+wsl --export docker-desktop d:\docker-desktop\docker-desktop\docker-desktop.tar
+
+wsl --export docker-desktop-data d:\docker-desktop\docker-desktop-data\docker-desktop-data.tar
+
+3、注销镜像
+
+wsl --unregister docker-desktop
+
+wsl --unregister docker-desktop-data
+
+4、导入之前保存的镜像
+wsl --import 应用名称 安装位置	导入的文件名 --version 版本号
+wsl --import docker-desktop d:\docker-desktop\docker-desktop d:\docker-desktop\docker-desktop\docker-desktop.tar --version 2
+
+wsl --import docker-desktop-data d:\docker-desktop\docker-desktop-data d:\docker-desktop\docker-desktop-data\docker-desktop-data.tar --version 2

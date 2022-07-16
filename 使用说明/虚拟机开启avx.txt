@@ -1,0 +1,3 @@
+VBoxManage setextradata "$vm_name" VBoxInternal/CPUM/IsaExts/AVX2 1	开启
+VBoxManage setextradata "$vm_name" VBoxInternal/CPUM/IsaExts/AVX2     删除
+$vm_name   换成虚拟机的名称
