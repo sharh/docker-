@@ -2,15 +2,18 @@ docker run --name mongo-express -d -p 8081:8081 mongo-express
 
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:latest
 
-
+启动rancher
 sudo docker run --name rancher -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher:latest
 docker run --name mongo -d mongo
 
+启动paddle
 docker run --name paddle -it -d -v /www/paddle:/paddle hub.baidubce.com/paddlepaddle/paddle:latest /bin/bash
 
 docker run --name tensorflow-jupyter -it -d  -v /www/tf/notebooks:/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-jupyter
 
 docker run -it --name tensorflow -d --rm tensorflow/tensorflow
+
+docker镜像地址设置，daemon.json里面加上这个属性
 {
   "registry-mirrors": [
     "https://docker.mirrors.ustc.edu.cn",
